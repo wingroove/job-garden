@@ -1,0 +1,59 @@
+<%= form_with(model: @plot) do |form| %>
+
+  <% if @plot.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@plot.errors.count, "error") %> prohibited
+        this plot from being saved:
+      </h2>
+      <ul>
+        <% @plot.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :company %><br>
+    <%= form.text_field :company %>
+  </p>
+   <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>  <p>
+    <%= form.label :contact %><br>
+    <%= form.text_field :contact %>
+  </p>  <p>
+    <%= form.label :applied %><br>
+    <%= form.check_box :applied, {}, "yes", "no" %>
+  </p>  <p>
+    <%= form.label :date %><br>
+    <%= form.date_field :date %>
+  </p>
+  <p>
+    <%= form.label :interiews %><br>
+    <%= form.number_field(:interviews, in: 0.0..4.0, step: 1.0) %>  
+    </p>
+    <p>
+    <%= form.label :in_consideration %><br>
+    <%= form.check_box :in_consideration, {}, "yes", "no" %>
+  </p>
+    <p>
+    <%= form.label :heard_about_through %><br>
+    <%= form.text_field :heard_about_through %>
+  </p>
+    <p>
+    <%= form.label :link %><br>
+    <%= form.text_field :link %>
+  </p>
+      <p>
+    <%= form.label :notes %><br>
+    <%= form.text_area :notes %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+  
+<% end %>

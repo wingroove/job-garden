@@ -1,0 +1,53 @@
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+<h1>My Job Garden</h1>
+ 
+<table>
+  <div class="garden_area">
+    <% @plot.each do |plot| %>
+      <div class="individual_plot">  
+            <% if plot.applied==="yes" %>
+              <div class="plants">
+                <img src="/sprout.gif" alt="You've applied!">
+              </div>
+              <% if plot.interviews>0 %>
+                <div class="plants">
+                  <img src="/leaves.gif" alt="You're interviewing!">
+                </div>
+              <% end %>
+              <% if plot.in_consideration==="no"%>
+                <div class="plants">
+                  <img src="/flower.gif" alt="They've moved on.">
+                </div>
+              <% end %>
+            <% else %>
+              <div class="plants">
+              <img src="/seeds.gif" alt="You have not applied yet">
+              </div>
+            <% end %>
+          <div class="company_name"><%= plot.company %></div>
+          <div class="job_title"><%= plot.title %></div>
+          <div class="overlay">
+            <% if plot.applied==="yes"%>
+              <div class="details"><strong>Date Applied: </strong><%= plot.date %></div>
+              <% else %>
+                <div class="details"><strong>You have not yet applied.</strong></div>
+              <% end %>            
+            <div class="details"><strong>Point of contact: </strong><%= plot.contact %></div>
+            <div class="details"><strong>Heard About Through: </strong><%= plot.heard_about_through %></div>
+            <div class="details"><strong><%= link_to 'Job Description', plot.link %></strong></div>
+            <div class="details"><strong>Notes: </strong><%= plot.notes %></div>
+            <div class="options">
+                    <%= link_to 'Details', plot_path(plot), class:"button" %>
+                    <%= link_to 'Edit', edit_plot_path(plot), class:"button" %>
+                    <%= link_to 'Delete', plot_path(plot),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' }, class:"button" %>
+            </div>
+          </div>
+      </div>
+    <% end %>
+    <div class="new_plot">
+      <%= link_to 'Till a new plot', new_plot_path, class:"button" %>
+    </div>
+  </div>
+</table>

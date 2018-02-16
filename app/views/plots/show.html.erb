@@ -1,0 +1,54 @@
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+<h1>Details </h1>
+<p>
+  <strong>Company:</strong>
+  <%= @plot.company %>
+</p>
+ 
+<p>
+  <strong>Job Title:</strong>
+  <%= @plot.title %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @plot.contact %>
+</p>
+
+<p>
+  <strong>Applied:</strong>
+  <%= @plot.applied %>
+</p>
+
+<p>
+  <strong>Date Applied:</strong>
+  <%= @plot.date %>
+</p>
+
+<p>
+  <strong>Number of Interviews:</strong>
+  <%= @plot.interviews %>
+</p>
+
+<p>
+  <strong>In Consideration:</strong>
+  <%= @plot.in_consideration %>
+</p>
+
+<p>
+  <strong>Heard About Through:</strong>
+  <%= @plot.heard_about_through %>
+</p>
+
+<p>
+  <strong>Link to Job Description:</strong>
+  <%= @plot.link %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @plot.notes %>
+</p>
+
+<%= link_to 'Edit', edit_plot_path(@plot) %> |
+<%= link_to 'Back', plots_path %>
