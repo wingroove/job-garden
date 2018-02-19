@@ -44,6 +44,6 @@ class PlotsController < ApplicationController
 
     private
         def plot_params
-            params.require(:plot).permit(:company, :title, :contact, :applied, :date, :interviews, :in_consideration, :heard_about_through, :link, :notes)
+            params.require(:plot).permit(:company, :title, :contact, :applied, :date_applied, :interviews, :in_consideration, :heard_about_through, :link, :notes)
         end
 end

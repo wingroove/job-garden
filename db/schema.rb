@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180214022633) do
+ActiveRecord::Schema.define(version: 20180219140416) do
 
   create_table "plots", force: :cascade do |t|
     t.string "company"
     t.string "title"
     t.string "contact"
     t.string "applied"
-    t.string "date"
+    t.date "date_applied"
     t.integer "interviews"
     t.string "in_consideration"
     t.string "heard_about_through"
