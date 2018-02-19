@@ -7,3 +7,5 @@ Individual plots can diplay further details about a job by rolling over a given 
 Currently, plants are organized solely by when they are added to the database. My hope is to allow users to organize the garden based on time, job status, company name, or job title.
 
 My next step will be working on this organization, then on further developing the aesthetic of the "new", "details, and "edit" pages. Following that I will update the gifs and the aethetics of the main garden page.
+
+![Screenshot](gardenCap.jpg)
