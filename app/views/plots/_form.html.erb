@@ -39,6 +39,13 @@
     <%= form.label :in_consideration %><br>
     <%= form.check_box :in_consideration, {}, "yes", "no" %>
   </p>
+    <%= form.label :job_offer %><br>
+    <%= form.check_box :job_offer, {}, "yes", "no" %>
+  </p>
+<p>
+    <%= form.label :offer_date %><br>
+    <%= form.date_field :offer_date %>
+  </p>
     <p>
     <%= form.label :heard_about_through %><br>
     <%= form.text_field :heard_about_through %>

@@ -1,22 +1,33 @@
 <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
-<h1>My Job Garden</h1>
- 
+
+<div class="banner">My Job Garden</div> 
 <table>
   <div class="garden_area">
     <% @plot.each do |plot| %>
       <div class="individual_plot">  
             <% if plot.applied==="yes" %>
-              <div class="plants">
-                <img src="/sprout.gif" alt="You've applied!">
-              </div>
-              <% if plot.interviews>0 %>
+              <% if plot.interviews===0 %>
                 <div class="plants">
-                  <img src="/leaves.gif" alt="You're interviewing!">
+                  <img src="/sprout.gif" alt="You've applied!">
+                </div>
+              <%end%>
+              <% if plot.interviews===1 %>
+                <div class="plants">
+                  <img src="/leafy_plant.gif" alt="You're interviewing!">
+                </div>
+                <% elsif plot.interviews>1 %>
+                <div class="plants">
+                  <img src="/leafy_plant2.gif" alt="You're interviewing!">
                 </div>
               <% end %>
               <% if plot.in_consideration==="no"%>
-                <div class="plants">
+                <div class="plants" style="transform: translate(-50%, -115%);">
                   <img src="/flower.gif" alt="They've moved on.">
+                </div>
+              <% end %>
+              <% if plot.job_offer==="yes"%>
+                <div class="plants" style="transform: translate(-50%, -115%);">
+                  <img src="/fruit.gif" alt="Congratulations!">
                 </div>
               <% end %>
             <% else %>
