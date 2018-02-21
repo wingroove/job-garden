@@ -9,3 +9,7 @@ Currently, plants are organized solely by when they are added to the database. M
 My next step will be working on this organization, then on further developing the aesthetic of the "new", "details, and "edit" pages. Following that I will update the gifs and the aethetics of the main garden page.
 
 ![Screenshot](gardenCap.jpg)
+(above: main page with all iterations of plants)
+
+![Screenshot](gardenCap-rollover.jpg)
+(above: rollover in action)
