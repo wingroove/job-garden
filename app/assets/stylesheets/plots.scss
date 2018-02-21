@@ -2,9 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body{
-    font-family: 'Acme', sans-serif;
-    background: #488B49;
-    color: rgb(78, 41, 10);
+    font-family: 'Mukta Mahee', sans-serif;
+    background-image: url("/Grass_01.jpg");    
+    background-color: #488B49;
+    color: #F2F2F2;
     font-weight: 300;
     position: relative; 
     min-height: 100%; 
@@ -20,31 +21,29 @@ img{
     background-color: rgb(46, 114, 47);
     padding: 15px;
     font-size:40px;
-    color: #f2f2f2;
 }
+
 .button{
     background-color: #306F35;
     border-radius: 5px;
-    color: #F2F2F2;
     padding: 3px 3px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
+    color: #F2F2F2;
 }
 
 .company_name{
     position: absolute;
-    top: 65%;
+    top: 70%;
     margin-left:5%;
     margin-right: 5%;
     font-weight: bold;
-    font-size: 22px;
-    color: #F2F2F2;
+    font-size: 15px;
 }
 
 .details{
     position: relative;
-    color: #F2F2F2;
     padding: 3px 3px;
     width: 230px;
     left: 10px;
@@ -81,11 +80,20 @@ img{
 
 .job_title{
     position: absolute;
-    top: 78%;
+    top: 80%;
     margin-left:5%;
     margin-right: 5%;
-    font-size: 15px;
-    color: #F2F2F2;
+    font-size: 14px;
+    color: rgb(199, 199, 199);
+}
+
+.mini-garden{
+    border-radius: 25px;
+    background-color: #5B3D18;
+    width: 30%;
+    margin: 50px 50px;
+    height: 70%;
+    padding: 5px 5px 10px 30px;
 }
 
 .new_plot{
@@ -122,6 +130,7 @@ img{
     opacity: 0;
     transition: .5s ease;
     background-color: rgb(24, 16, 8);
+    font-size: 15px;
 }
 
 .plants{
@@ -130,3 +139,4 @@ img{
     left: 50%;
     transform: translate(-50%, -95%);
 }
+

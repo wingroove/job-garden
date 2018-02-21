@@ -1,6 +1,6 @@
-<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Mukta+Mahee" rel="stylesheet">
 
-<div class="banner">My Job Garden</div> 
+<div class="banner"><strong>My Job Garden</strong></div> 
 <table>
   <div class="garden_area">
     <% @plot.each do |plot| %>
@@ -17,7 +17,7 @@
                 </div>
                 <% elsif plot.interviews>1 %>
                 <div class="plants">
-                  <img src="/leafy_plant2.gif" alt="You're interviewing!">
+                  <img src="/leafy_plant2.gif" alt="You're past the initial interview!">
                 </div>
               <% end %>
               <% if plot.in_consideration==="no"%>
@@ -26,7 +26,7 @@
                 </div>
               <% end %>
               <% if plot.job_offer==="yes"%>
-                <div class="plants" style="transform: translate(-50%, -115%);">
+                <div class="plants">
                   <img src="/fruit.gif" alt="Congratulations!">
                 </div>
               <% end %>
@@ -42,12 +42,13 @@
               <% if plot.date_applied.blank?%>
                 <div class="details"><strong>You have applied.</strong></div>
                 <% else %>
-                  <%-# Let's look at this at some point to get the date to display as MM-DD-YYYY instead of YYYY-DD-MM -%>
+<%-# Let's look at this at some point to get the date to display as MM-DD-YYYY instead of YYYY-DD-MM -%>
                   <div class="details"><strong>Date Applied: </strong><%= plot.date_applied %></div>
               <% end %>
               <% else %>
                 <div class="details"><strong>You have not applied yet.</strong></div>
-              <% end %>            
+              <% end %>   
+<%-# write a little function here to deal with the unlesses -%>        
             <% unless plot.contact.blank?%>
               <div class="details"><strong>Point of contact: </strong><%= plot.contact %></div>
             <% end %>
